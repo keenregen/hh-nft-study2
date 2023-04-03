@@ -9,6 +9,8 @@ require("dotenv").config();
 
 const goerliRpcPoint = process.env.goerliRpcPoint || "";
 const goerliAccountA = process.env.goerliAccountA || "";
+const goerliAccountB = process.env.goerliAccountB || "";
+const goerliAccountC = process.env.goerliAccountC || "";
 
 const localHostRpcPoint = process.env.localHostRpcPoint || "";
 
@@ -35,7 +37,7 @@ module.exports = {
      networks: {
           goerli: {
                url: goerliRpcPoint,
-               accounts: [goerliAccountA],
+               accounts: [goerliAccountA, goerliAccountB, goerliAccountC],
                chainId: 5,
                blockConfirms: 3,
                saveDeployments: true,
