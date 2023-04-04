@@ -2,7 +2,7 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
 describe("NftTokenTwo", function () {
-     this.timeout(50000); // line 5
+     this.timeout(50000);
 
      let nftTokenTwo;
      let deployer;
@@ -10,13 +10,12 @@ describe("NftTokenTwo", function () {
      let acc2;
 
      this.beforeEach(async function () {
-          // line 12
           const NftTokenTwo = await ethers.getContractFactory("NftTokenTwo");
           [deployer, acc1, acc2] = await ethers.getSigners();
 
           nftTokenTwo = await NftTokenTwo.deploy();
 
-          //   nftTokenTwo = await NftTokenTwo.attach("0x6bED992aAa79564b56A62c2341DB6C6bC0F5b247");
+          //   nftTokenTwo = await NftTokenTwo.attach("0x45FEa26207a5fac074A7810A18eC9EE9B5cDF23B");
      });
 
      it("Should set the right deployer", async function () {

@@ -7,7 +7,9 @@ require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
+const sepoliaRpcPoint = process.env.sepoliaRpcPoint || "";
 const goerliRpcPoint = process.env.goerliRpcPoint || "";
+
 const goerliAccountA = process.env.goerliAccountA || "";
 const goerliAccountB = process.env.goerliAccountB || "";
 const goerliAccountC = process.env.goerliAccountC || "";
@@ -35,6 +37,13 @@ module.exports = {
      defaultNetwork: "hardhat",
 
      networks: {
+          sepolia: {
+               url: sepoliaRpcPoint,
+               accounts: [goerliAccountA, goerliAccountB, goerliAccountC],
+               chainId: 11155111,
+               blockConfirms: 3,
+               saveDeployments: true,
+          },
           goerli: {
                url: goerliRpcPoint,
                accounts: [goerliAccountA, goerliAccountB, goerliAccountC],
