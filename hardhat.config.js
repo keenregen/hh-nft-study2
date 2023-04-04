@@ -8,6 +8,7 @@ require("dotenv").config();
 /** @type import('hardhat/config').HardhatUserConfig */
 
 const sepoliaRpcPoint = process.env.sepoliaRpcPoint || "";
+const bscTestRpcPoint = process.env.bscTestRpcPoint || "";
 const goerliRpcPoint = process.env.goerliRpcPoint || "";
 
 const goerliAccountA = process.env.goerliAccountA || "";
@@ -41,6 +42,13 @@ module.exports = {
                url: sepoliaRpcPoint,
                accounts: [goerliAccountA, goerliAccountB, goerliAccountC],
                chainId: 11155111,
+               blockConfirms: 3,
+               saveDeployments: true,
+          },
+          bsctest: {
+               url: bscTestRpcPoint,
+               accounts: [goerliAccountA, goerliAccountB, goerliAccountC],
+               chainId: 97,
                blockConfirms: 3,
                saveDeployments: true,
           },
