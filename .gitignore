@@ -1,4 +1,7 @@
+# environment vars!
+.env
 .encryptedKey.json
+
 # vscode
 .vscode
 
@@ -10,8 +13,7 @@ node_modules
 coverage
 coverage.json
 
-# don't push the environment vars!
-.env
+
 
 # Built application files
 .DS*
@@ -100,4 +102,5 @@ lint/tmp/
 
 gas-report.txt
 .issue.md
+typechain
 typechain-types
