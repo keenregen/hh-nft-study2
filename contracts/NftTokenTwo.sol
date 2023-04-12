@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-// Sepolia Contract Address: 0x45FEa26207a5fac074A7810A18eC9EE9B5cDF23B
+// Sepolia Contract Address: 0x8737938Cd4D349914d862c55b1BC60424b1cE2eF
 // Goerli Contract Address: 0x6bED992aAa79564b56A62c2341DB6C6bC0F5b247
 contract NftTokenTwo is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
      using Counters for Counters.Counter;
